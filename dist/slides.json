@@ -1,0 +1,85 @@
+{
+  "title": "統計區間報告",
+  "page_count": 11,
+  "pdf": "report.pdf",
+  "source_pdf_sha256": "39bf12e19fe729f472d3bc7099e36ac43edcd8d1244a5f021ecc78e558578bcd",
+  "slides": [
+    {
+      "page": 1,
+      "image": "slides/01.webp",
+      "thumbnail": "thumbs/01.webp",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "page": 2,
+      "image": "slides/02.webp",
+      "thumbnail": "thumbs/02.webp",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "page": 3,
+      "image": "slides/03.webp",
+      "thumbnail": "thumbs/03.webp",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "page": 4,
+      "image": "slides/04.webp",
+      "thumbnail": "thumbs/04.webp",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "page": 5,
+      "image": "slides/05.webp",
+      "thumbnail": "thumbs/05.webp",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "page": 6,
+      "image": "slides/06.webp",
+      "thumbnail": "thumbs/06.webp",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "page": 7,
+      "image": "slides/07.webp",
+      "thumbnail": "thumbs/07.webp",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "page": 8,
+      "image": "slides/08.webp",
+      "thumbnail": "thumbs/08.webp",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "page": 9,
+      "image": "slides/09.webp",
+      "thumbnail": "thumbs/09.webp",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "page": 10,
+      "image": "slides/10.webp",
+      "thumbnail": "thumbs/10.webp",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "page": 11,
+      "image": "slides/11.webp",
+      "thumbnail": "thumbs/11.webp",
+      "width": 2560,
+      "height": 1440
+    }
+  ]
+}

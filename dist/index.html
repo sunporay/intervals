@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f9">
+  <meta name="description" content="統計區間報告，共 11 頁。線上翻頁、全螢幕閱讀，並可下載原始 PDF。">
+  <meta property="og:title" content="統計區間報告">
+  <meta property="og:description" content="11 頁完整簡報，支援線上閱讀與 PDF 下載。">
+  <title>統計區間報告 · 線上簡報</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="slides/01.webp" as="image">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#page=1" aria-label="統計區間報告首頁">
+      <svg class="brand-icon" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="#1769aa"/><path d="M7 29c7 0 7-17 13-17s6 17 13 17M12 30V19m16 11V19" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+      <span><span class="eyebrow">STATISTICAL INTERVALS</span><span class="brand-title">統計區間報告</span></span>
+    </a>
+    <nav class="header-actions" aria-label="報告操作">
+      <button class="button quiet" id="share" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l2-2"/></svg><span>複製連結</span></button>
+      <a class="button primary" href="report.pdf" download="統計區間報告.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg><span>下載 PDF</span></a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <div class="report-heading"><div><p class="section-label">線上簡報</p><h1>區間估計</h1></div><span class="document-meta">完整報告 <span class="dot">·</span> 11 頁</span></div>
+
+    <section class="viewer" id="viewer" aria-label="簡報閱讀器">
+      <div class="viewer-toolbar">
+        <button class="button quiet" id="overview-open" type="button" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>頁面總覽</button>
+        <div class="toolbar-right"><a class="pdf-link" href="report.pdf" target="_blank" rel="noopener">開啟原始 PDF<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9M10 3H3v18h18v-7"/></svg></a><button class="icon-button" id="fullscreen" type="button" aria-label="全螢幕閱讀" title="全螢幕（F）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button></div>
+      </div>
+
+      <div class="stage" id="stage">
+        <img id="slide" src="slides/01.webp" width="2560" height="1440" alt="統計區間報告，第 1 頁" decoding="async" fetchpriority="high">
+        <p class="image-error" id="image-error" hidden>本頁暫時無法載入。<a href="report.pdf" target="_blank" rel="noopener">開啟 PDF 閱讀</a></p>
+      </div>
+
+      <div class="viewer-bottom">
+        <p class="keyboard-hint"><kbd>←</kbd><kbd>→</kbd><span>翻頁</span><span class="hint-divider"></span><kbd>F</kbd><span>全螢幕</span></p>
+        <div class="page-navigation" aria-label="簡報翻頁">
+          <button class="icon-button" id="previous" type="button" aria-label="上一頁" title="上一頁（←）" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+          <label class="page-number"><span class="sr-only">跳至頁碼</span><input id="page-input" type="number" min="1" max="11" value="1" inputmode="numeric" aria-label="頁碼"><span>/ 11</span></label>
+          <button class="icon-button" id="next" type="button" aria-label="下一頁" title="下一頁（→）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+        </div>
+        <span class="reading-status" id="reading-status" role="status" aria-live="polite">第 1 頁，共 11 頁</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="閱讀進度" aria-valuemin="1" aria-valuemax="11" aria-valuenow="1" id="progress"><span id="progress-fill"></span></div>
+    </section>
+
+    <footer class="page-footer"><p>統計區間報告 <span class="dot">·</span> 原始簡報完整呈現</p><p>手機可左右滑動翻頁</p></footer>
+    <noscript><p class="noscript">啟用 JavaScript 後即可翻頁，或<a href="report.pdf">直接開啟完整 PDF</a>。</p></noscript>
+  </main>
+
+  <dialog id="overview" aria-labelledby="overview-title">
+    <div class="dialog-header"><div><p class="section-label">快速導覽</p><h2 id="overview-title">選擇要閱讀的頁面</h2></div><button id="overview-close" class="icon-button" type="button" aria-label="關閉頁面總覽"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <div class="thumbnail-grid" id="thumbnails"></div>
+  </dialog>
+  <p class="toast" id="toast" role="status" hidden></p>
+</body>
+</html>
