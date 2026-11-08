@@ -1,0 +1,14 @@
+[Unit]
+Description=Statistical intervals presentation
+
+[Service]
+Type=simple
+WorkingDirectory=/data2/408_Ray/statistical-intervals-presentation
+ExecStart=/usr/bin/python3 /data2/408_Ray/statistical-intervals-presentation/serve.py --bind 0.0.0.0 --port 8765
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=10
+
+[Install]
+WantedBy=default.target
